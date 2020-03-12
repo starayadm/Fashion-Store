@@ -3,6 +3,7 @@
 @import "node_modules/bootstrap/scss/functions"
 @import "node_modules/bootstrap/scss/variables"
 @import "node_modules/bootstrap/scss/mixins"
+@import "node_modules/bootstrap/scss/carousel"
 @import "node_modules/bootstrap/scss/root"
 @import "node_modules/bootstrap/scss/reboot"
 @import "node_modules/bootstrap/scss/grid"
@@ -16,15 +17,18 @@
 
 // USER VARIABLES SECTION
 
-$accent: #171717 // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #171717 // Text Color
+$accent: #171717
+$textcolor: #171717
+$light-gray: #ededed
+$brand-color: #000
+$theme-colors: ("primary": #171717)
+
+
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 $montserrat: Montserrat, sans-serif
 $opensans: "Open Sans", sans-serif
 
-$theme-colors: ("primary": #171717)
-$brand-color: #000
+$fontsize: 16px
 
 // Bootstrap compatible gutter variable => $gutter
 
@@ -50,7 +54,9 @@ $gutter: $grid-gutter-width
 @include font("Montserrat", normal, 700, "../fonts/MontserratBold.woff2")
 @include font("Montserrat", normal, 800, "../fonts/MontserratExtraBold.woff2")
 
+@include font("Font Awesome 5 Brands", normal, 400, "../fonts/webfonts/fa-brands-400.woff2")	
 @include font("Font Awesome 5 Free", normal, 900, "../fonts/webfonts/fa-solid-900.woff2")
+
 
 
 // GENERAL DOCUMENT STYLES

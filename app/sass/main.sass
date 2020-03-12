@@ -1,9 +1,10 @@
 @import config
 
-// CUSTOM USER STYLES & IMPORTS
+//--------------------- Main Header
 
 .main-header
 	text-transform: uppercase
+	background-color: $white
 
 .navbar
 	margin-left: 5%
@@ -65,3 +66,47 @@
 .header-search
 	&__btn
 		color: $textcolor
+
+//--------------------- Hero Section
+
+.hero
+	position: relative
+	// height: 80vh
+	border-top: 6px solid #f3ebdc
+	&__social
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $light-gray
+	&__carousel-content
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 10
+		width: 100%
+
+.social
+	width: 100%
+	display: flex
+	justify-content: space-around
+	align-items: center
+	margin: 0
+	padding: 1.5rem 0
+	@include media-breakpoint-up(md)
+		flex-direction: column
+	&__item
+		list-style: none
+		&:not(:last-of-type)
+			@include media-breakpoint-up(md)
+				margin-bottom: 44px
+	&__link
+		padding: 0.5rem
+		color: $textcolor
+		transition: color 0.3s ease
+		&:hover, &:focus
+			color: rgba($textcolor, 0.7)
+			outline: none
+
+.carousel-caption
+	position: static
