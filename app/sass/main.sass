@@ -71,14 +71,21 @@
 
 .hero
 	position: relative
-	// height: 80vh
 	border-top: 6px solid #f3ebdc
 	&__social
-		height: 100%
-		display: flex
-		justify-content: center
-		align-items: center
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 10
+		width: 100%
 		background-color: $light-gray
+		@include media-breakpoint-up(lg)
+			width: auto
+			height: 100%
+	&__carousel
+		padding-top: 72px
+		@include media-breakpoint-up(lg)
+			padding-top: 0
 	&__carousel-content
 		position: absolute
 		top: 0
@@ -87,18 +94,22 @@
 		width: 100%
 
 .social
-	width: 100%
 	display: flex
 	justify-content: space-around
 	align-items: center
 	margin: 0
 	padding: 1.5rem 0
-	@include media-breakpoint-up(md)
+	@include media-breakpoint-up(lg)
+		height: 100%
 		flex-direction: column
+		justify-content: center
 	&__item
 		list-style: none
+		@include media-breakpoint-up(lg)
+			margin-right: 1.5rem
+			margin-left: 1.5rem
 		&:not(:last-of-type)
-			@include media-breakpoint-up(md)
+			@include media-breakpoint-up(lg)
 				margin-bottom: 44px
 	&__link
 		padding: 0.5rem
@@ -110,3 +121,22 @@
 
 .carousel-caption
 	position: static
+	text-align: left
+	text-transform: uppercase
+	color: $textcolor
+	h2
+		margin-bottom: 40px
+		font-size: 116px
+		font-weight: 600
+		line-height: 1
+		letter-spacing: 2px
+	&__tagline
+		line-height: 1.4
+		.num
+			display: inline-block
+			margin-right: 1rem
+			font-size: 18px
+			font-weight: 600
+		.text
+			font-size: 14px
+			letter-spacing: 1px
