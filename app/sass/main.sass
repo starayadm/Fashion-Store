@@ -76,7 +76,7 @@
 		position: absolute
 		top: 0
 		left: 0
-		z-index: 10
+		z-index: 100
 		width: 100%
 		background-color: $light-gray
 		@include media-breakpoint-up(lg)
@@ -121,6 +121,7 @@
 
 .carousel-caption
 	position: static
+	padding-top: 200px
 	text-align: left
 	text-transform: uppercase
 	color: $textcolor
@@ -131,6 +132,7 @@
 		line-height: 1
 		letter-spacing: 2px
 	&__tagline
+		margin-bottom: 40px
 		line-height: 1.4
 		.num
 			display: inline-block
@@ -140,3 +142,42 @@
 		.text
 			font-size: 14px
 			letter-spacing: 1px
+	&__icons
+		margin-bottom: 50px
+		.fas.fa-heart, .fas.fa-angle-right, .fas.fa-share-alt
+			&::before
+				font-size: 11px
+				line-height: 37px
+				color: $textcolor
+				transition: color 0.3s ease
+		.fas.fa-angle-right
+			&::before
+				font-size: 14px
+		.share-icon
+			width: 37px
+			height: 37px
+			padding: 0
+			background-color: transparent
+			border: 1px solid $textcolor
+			border-radius: 10em
+			transition: background-color 0.3s ease
+			&:not(:last-of-type)
+				margin-right: 1rem
+			&:hover, &:focus
+				background-color: $textcolor
+				.fas.fa-heart, .fas.fa-angle-right, .fas.fa-share-alt
+					&::before
+						color: $white
+	&__text
+		margin-bottom: 40px
+		font-family: $opensans
+		font-size: 14px
+		line-height: 1.8
+		text-transform: none
+
+.btn-sm
+	letter-spacing: 0.5px
+
+.offer
+	display: flex
+	background-color: $bg-offer
