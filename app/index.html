@@ -38,7 +38,7 @@
                     <a class="nav-link" href="#">Главная</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Купить онлайн</a>
+                    <a class="nav-link" href="#">Дети</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Женщины</a>
@@ -74,7 +74,7 @@
     <main>
       <section class="hero">
         <div class="row no-gutters">
-          <div class="hero__social">
+          <aside class="hero__social">
             <ul class="social">
               <li class="social__item">
                 <a href="#" class="social__link"
@@ -97,18 +97,18 @@
                 ></a>
               </li>
             </ul>
-          </div>
+          </aside>
           <div class="col-12">
             <div class="hero__carousel">
               <div
                 id="heroCarousel"
-                class="carousel slide"
+                class="carousel slide carousel-fade"
                 data-ride="carousel"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img
-                      src="./images/dest/slide-1.jpg"
+                      src="./images/dest/hero-slider/slide-1.jpg"
                       class="d-block w-100"
                       alt="#"
                     />
@@ -151,39 +151,67 @@
                                 </div>
                                 <a
                                   href="#"
-                                  class="btn btn-primary btn-sm"
+                                  class="btn btn-primary btn-sm hero__carousel-btn"
                                   role="button"
                                   >Посмотреть</a
                                 >
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./images/dest/hero-slider/slide-2.jpg"
+                      class="d-block w-100"
+                      alt="#"
+                    />
+                    <div class="hero__carousel-content">
+                      <div class="row no-gutters">
+                        <div class="col-6 offset-6">
+                          <div class="carousel-caption">
+                            <h2>Весенняя коллекция</h2>
+                            <div class="carousel-caption__tagline">
+                              <span class="num">02</span>
+                              <span class="text">Мужские аксессуары</span>
+                            </div>
+                            <div class="row">
                               <div class="col-12">
-                                <!-- <div class="offer">
-                                  <img
-                                    src="./images/dest/offer-1.jpg"
-                                    class="img-fluid offer__img"
-                                    alt="#"
-                                  />
-                                  <div class="offer__content">
-                                    <div class="offer__header">
-                                      <h3 class="offer__title">
-                                        Предложение месяца
-                                      </h3>
-                                      <p class="offer__tagline">
-                                        Джинсовая куртка
-                                      </p>
-                                    </div>
-                                    <div class="offer__body">
-                                      <p class="offer__price-crossed-out">
-                                        ₽3500
-                                      </p>
-                                      <p class="offer__price">₽2300</p>
-                                      <a href="#" class="btn btn-secondary"
-                                        >Купить</a
-                                      >
-                                    </div>
-                                    <div class="timer"></div>
-                                  </div>
-                                </div> -->
+                                <div class="carousel-caption__icons">
+                                  <button type="button" class="share-icon">
+                                    <i
+                                      class="fas fa-angle-right"
+                                      aria-hidden="true"
+                                    ></i>
+                                  </button>
+                                  <button type="button" class="share-icon">
+                                    <i
+                                      class="fas fa-heart"
+                                      aria-hidden="true"
+                                    ></i>
+                                  </button>
+                                  <button type="button" class="share-icon">
+                                    <i
+                                      class="fas fa-share-alt"
+                                      aria-hidden="true"
+                                    ></i>
+                                  </button>
+                                </div>
+                                <div class="carousel-caption__text">
+                                  <p>
+                                    Свежая весенняя коллекция мужских
+                                    аксессуаров никого не&nbsp;оставит
+                                    равнодушным.
+                                  </p>
+                                </div>
+                                <a
+                                  href="#"
+                                  class="btn btn-primary btn-sm hero__carousel-btn"
+                                  role="button"
+                                  >Посмотреть</a
+                                >
                               </div>
                             </div>
                           </div>
@@ -198,10 +226,7 @@
                   role="button"
                   data-slide="prev"
                 >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
+                  <i class="fas fa-long-arrow-alt-left" aria-hidden="true"></i>
                   <span class="sr-only">Назад</span>
                 </a>
                 <a
@@ -210,12 +235,134 @@
                   role="button"
                   data-slide="next"
                 >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
+                  <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
                   <span class="sr-only">Далее</span>
                 </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="popup-offer">
+            <img
+              src="./images/dest/offer-1.jpg"
+              class="img-fluid offer__img"
+              alt="#"
+            />
+            <div class="offer__content">
+              <div class="offer__header">
+                <h3 class="offer__title">
+                  Предложение месяца
+                </h3>
+                <p class="offer__tagline">
+                  Джинсовая куртка
+                </p>
+              </div>
+              <div class="offer__body">
+                <p class="offer__price-crossed-out">
+                  ₽3500
+                </p>
+                <p class="offer__price">₽2300</p>
+                <a href="#" class="btn btn-secondary">Купить</a>
+              </div>
+              <div class="timer"></div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <section class="section offers">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="section__title">
+                Специальное предложение
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-3 col-auto">
+              <div class="offers__column-sm">
+                <a href="#" class="offer">
+                  <img
+                    src="images/dest/offers/offer-1.jpg"
+                    alt="#"
+                    class="offer__img img-fluid"
+                  />
+                  <p class="offer__title">
+                    Купи 2&nbsp;пары со&nbsp;скидкой&nbsp;50%
+                  </p>
+                </a>
+                <a href="#" class="offer">
+                  <img
+                    src="images/dest/offers/offer-4.jpg"
+                    alt="#"
+                    class="offer__img img-fluid"
+                  />
+                  <p class="offer__title">
+                    Сумки со&nbsp;скидкой&nbsp;75%
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-auto">
+              <div class="offers__column-lg">
+                <div class="offer">
+                  <img
+                    src="images/dest/offers/offer-2.jpg"
+                    alt="#"
+                    class="offer__img img-fluid"
+                  />
+                  <div class="offer__text">
+                    <p class="offer__item">Женская блуза</p>
+                    <p class="offer__title">Распродажа коллекции</p>
+                    <a href="#" class="btn btn-sm btn-primary">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-auto">
+              <div class="offers__column-md">
+                <div class="offer">
+                  <img
+                    src="images/dest/offers/offer-3.jpg"
+                    alt="#"
+                    class="offer__img img-fluid"
+                  />
+                  <div class="offer__text">
+                    <p class="offer__item">Зимняя куртка</p>
+                    <p class="offer__title">Скидки от&nbsp;50%</p>
+                    <a href="#" class="btn btn-sm btn-primary">Посмотреть</a>
+                  </div>
+                </div>
+                <a href="#" class="offer">
+                  <img
+                    src="images/dest/offers/offer-5.jpg"
+                    alt="#"
+                    class="offer__img img-fluid"
+                  />
+                  <p class="offer__title">
+                    Скидка&nbsp;40% на&nbsp;все очки
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="offers__banner">
+                <div class="row">
+                  <div
+                    class="col-12 col-sm-10 offset-sm-2 col-md-8 offset-md-4 col-lg-6 offset-lg-5"
+                  >
+                    <div class="offers__banner-content">
+                      <p class="title">
+                        Получи скидку на&nbsp;любую вещь из&nbsp;новой коллекции
+                      </p>
+                      <p class="text">Подпишись на&nbsp;наши новости</p>
+                      <btn type="bytton" class="btn btn-sm btn-secondary"
+                        >Подписаться</btn
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
