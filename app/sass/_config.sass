@@ -13,6 +13,7 @@ $btn-border-radius-sm: 40px
 @import "node_modules/bootstrap/scss/functions"
 @import "node_modules/bootstrap/scss/variables"
 @import "node_modules/bootstrap/scss/mixins"
+@import "node_modules/bootstrap/scss/card"
 @import "node_modules/bootstrap/scss/carousel"
 @import "node_modules/bootstrap/scss/root"
 @import "node_modules/bootstrap/scss/reboot"
@@ -23,8 +24,10 @@ $btn-border-radius-sm: 40px
 @import "node_modules/bootstrap/scss/nav"
 @import "node_modules/bootstrap/scss/navbar"
 @import "node_modules/bootstrap/scss/utilities"
+
 @import "node_modules/@fortawesome/fontawesome-free/css/all.min"
 
+@import "node_modules/slick-carousel/slick/slick"
 
 // USER VARIABLES SECTION
 
@@ -34,10 +37,15 @@ $light-gray: #ededed
 $brand-color: #000
 $bg-offer: #363636
 $title-color: #2d2b27
+$collection-bold: #1a1a1a
+$collection-regular: #898989
+$arrow-circle: #d9d9d9
 
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 $montserrat: Montserrat, sans-serif
 $opensans: "Open Sans", sans-serif
+
+
 
 $fontsize: 16px
 
@@ -68,8 +76,6 @@ $gutter: $grid-gutter-width
 @include font("Font Awesome 5 Brands", normal, 400, "../fonts/webfonts/fa-brands-400")	
 @include font("Font Awesome 5 Free", normal, 900, "../fonts/webfonts/fa-solid-900")
 
-
-
 // GENERAL DOCUMENT STYLES
 
 ::placeholder
@@ -94,6 +100,9 @@ body
 	position: relative
 	line-height: 1.5
 	color: $textcolor
+
+.js-focus-visible :focus:not(.focus-visible)
+	outline: none
 
 .btn
 	text-transform: uppercase

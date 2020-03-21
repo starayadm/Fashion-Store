@@ -5,6 +5,7 @@
 .main-header
 	text-transform: uppercase
 	background-color: $white
+	border-bottom: 6px solid #f3ebdc
 
 .navbar
 	margin-left: 5%
@@ -83,7 +84,6 @@
 
 .hero
 	position: relative
-	border-top: 6px solid #f3ebdc
 	&__social
 		position: absolute
 		top: 0
@@ -129,11 +129,10 @@
 		transition: color 0.3s ease
 		&:hover, &:focus
 			color: rgba($textcolor, 0.7)
-			outline: none
 
 .carousel-caption
 	position: static
-	padding-top: 8vw
+	padding-top: 7vw
 	text-align: left
 	text-transform: uppercase
 	color: $textcolor
@@ -283,8 +282,6 @@
 		font-size: 13px
 
 .offers__banner
-	// display: flex
-	// justify-content: flex-end
 	margin-top: $gutter
 	background-image: url("../images/dest/offers/banner.jpg")
 	background-size: cover
@@ -293,11 +290,9 @@
 	@include media-breakpoint-up(sm)
 		background-position: center center
 	&-content
-		// max-width: 480px
 		margin-top: calc(30px + 0.2vw)
 		margin-bottom: calc(30px + 0.2vw)
 		padding: 0 0.5rem
-		// margin-right: calc(80px + 5vw)
 		text-align: center
 		color: $title-color
 		.title
@@ -308,4 +303,88 @@
 		.text
 			margin-bottom: 2rem
 			font-size: 14px
+
+//--------------------- Collection Section
+
+.collection__carousel-wrapper
+	position: relative
+
+.slick-list
+	margin: 0 $gutter/-6
+
+.card
+	margin: 0 $gutter/6
+	border: none
+	border-radius: 0
+	&-body
+		padding-top: 30px
+		padding-left: 0
+		padding-bottom: 0
+		font-size: 15px
+		line-height: 1.2
+	&-title, 
+	&-subtitle,
+		margin-bottom: 10px
+	&-title, 
+	&__price .new,
+	&__price .currency
+		font-weight: 700
+		color: $collection-bold
+	&-subtitle, &__price .old
+		color: $collection-regular
+	&__price .old
+		margin-right: 0.5rem
+		text-decoration: line-through
+	&__price .new,
+	&__price .currency
+		font-weight: 700
+	&:hover
+		text-decoration: none
+
+.collection__arrows
+	position: absolute
+	top: 50%
+	width: 100%
+	display: flex
+	justify-content: space-between
+	transform: translateY(-50%)
+	.arrow-prev
+		margin-left: -2.8rem
+	.arrow-next
+		margin-right: -2.8rem
+
+.collection__arrow
+	width: 35px
+	height: 35px
+	padding: 0
+	line-height: 35px
+	background-color: transparent
+	border: 2px solid $arrow-circle
+	border-radius: 10em
+	.fas.fa-angle-left, .fas.fa-angle-right
+		&::before
+			position: relative
+			font-size: 19px
+			color: $arrow-circle
+			transition: color 0.3s ease
+	.fas.fa-angle-left
+		&::before
+			right: 1px
+	.fas.fa-angle-right
+		&::before
+			left: 1px
+	&:hover
+		.fas.fa-angle-left, .fas.fa-angle-right
+			&::before
+				color: $textcolor
+
+@media (hover: none)
+	.collection__arrow
+		&:hover
+			.fas.fa-angle-left, .fas.fa-angle-right
+				&::before
+					color: $arrow-circle
+
+
+
 			
