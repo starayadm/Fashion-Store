@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    prevArrow: $('.arrow-prev'),
-    nextArrow: $('.arrow-next'),
+    prevArrow: $('.collection__arrow-prev'),
+    nextArrow: $('.collection__arrow-next'),
     responsive: [
       {
         breakpoint: 1200,
@@ -23,6 +23,25 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       {
         breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  // .blog__carousel (slick.js)
+
+  $('.blog__carousel').slick({
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    prevArrow: $('.blog__arrow-prev'),
+    nextArrow: $('.blog__arrow-next'),
+    responsive: [
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 1
         }

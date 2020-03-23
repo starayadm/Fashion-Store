@@ -342,19 +342,21 @@
 	&:hover
 		text-decoration: none
 
-.collection__arrows
+.arrows
 	position: absolute
 	top: 50%
 	width: 100%
 	display: flex
 	justify-content: space-between
 	transform: translateY(-50%)
-	.arrow-prev
+	.collection__arrow-prev,
+	.blog__arrow-prev
 		margin-left: -2.8rem
-	.arrow-next
+	.collection__arrow-next,
+	.blog__arrow-next,
 		margin-right: -2.8rem
 
-.collection__arrow
+.arrow
 	width: 35px
 	height: 35px
 	padding: 0
@@ -380,14 +382,50 @@
 				color: $textcolor
 
 @media (hover: none)
-	.collection__arrow
+	.arrow
 		&:hover
 			.fas.fa-angle-left, .fas.fa-angle-right
 				&::before
 					color: $arrow-circle
 
-.collection__btn
+.collection__btn,
+.blog__btn
 	text-align: center
 
+//--------------------- Blog Section
+.blog__carousel-wrapper
+	position: relative
 
+.blog-card
+	position: relative
+	display: block
+	margin: 0 $gutter/6
+	&__caption
+		position: relative
+		top: -2rem
+		width: 80%
+		margin: 0 auto
+		padding: 1rem
+		text-align: center
+		background-color: $white
+		.title
+			margin-bottom: 10px
+			font-size: calc(14px + 0.3vw)
+			font-weight: 600
+			line-height: 1.2
+			text-transform: uppercase
+			letter-spacing: 0.05em
+			color: $title-color
+			transition: color 0.3s ease
+		.info
+			font-family: $opensans
+			font-style: italic
+			font-size: 14px
+			line-height: 1.1
+			color: $info
+	&:hover, &:focus
+		text-decoration: none
+		.title
+			color: rgba($textcolor, 0.5)
+			outline: none
 			
